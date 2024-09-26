@@ -10,7 +10,8 @@ UL{
     align-items: center;
     padding: 16px;
 }
-img {
+header img {
+
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -19,4 +20,9 @@ img {
 }
    h1 {
     color: yellow;
+   }
+
+   footer img {
+    width: 400px;
+    height: 300px;
    }
