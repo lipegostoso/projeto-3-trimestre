@@ -1,102 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>felipe buzolla</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Moto Shop - Loja de Motos Premium</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Moto Shop - Compre motos premium, acessórios e viva a liberdade!">
+    <meta name="keywords" content="motos, loja de motos, motocicletas, acessórios">
 </head>
 <body>
-     <nav>
-    
-        <ul>
-            <li>
-                <a href="index.html">sobre mim</a>
-            </li>       
-                <li>
-                <a href="project.html">projetos</a>
-            </li>         
-              <li>
-                <a href="contac.html">contato</a>
-            </li>
-        </ul>
-     </nav>
-     <header>
-        <div class="center">
-           <center>
-            <img src="buzolla.jpg"></img></center>
-           </div>
-        <h1>Felipe buzolla </h1>
-        <h2>garsom</h2>
-     </header>
-<main>
-    <section>
-        <h3>Sobre mim</h3>
-        <p>
-            Olá! Meu nome é felipe buzolla e sou garçom. 
-            Trabalho em um lanchonete onde tenho o prazer de
-             atender os clientes, garantindo que tenham uma 
-             experiência memorável. Adoro interagir com as 
-             pessoas, entender suas preferências e ajudá-las a 
-             escolher os melhores pratos do menu. Para mim, cada 
-             dia é uma nova oportunidade de aprender e 
-             proporcionar um atendimento de qualidade. Estou 
-             sempre atento aos detalhes, pois acredito que a 
-             hospitalidade faz toda a diferença.
-        </p>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <h1>Moto Shop</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#shop">Loja</a></li>
+                <li><a href="#cart">Carrinho (<span id="cart-count">0</span>)</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Principal -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Conquiste a Estrada</h2>
+            <p>As melhores motos para sua aventura estão aqui!</p>
+            <a href="#shop" class="btn">Comprar Agora</a>
+        </div>
     </section>
-    <section>
-        <h3>Formação</h3>
-        <p>
-            No ensino médio, estou vivendo uma fase cheia de
-             descobertas e desafios. As aulas são intensas, com
-              matérias que vão desde matemática até literatura
-        , cada uma trazendo um novo conhecimento. Além disso,
-         as amizades se aprofundam, e as experiências na escola,
-          como feiras de ciências e eventos culturais, tornam
-           tudo mais emocionante. Estou sempre tentando encontrar
-            o equilíbrio entre estudar para as provas e
-             aproveitar os momentos com meus amigos. É
-              um período de formação, onde começo a entender
-               melhor o que quero para o futuro.
-        </p>
+
+    <!-- Seção Loja -->
+    <section id="shop" class="shop">
+        <h2>Nossas Motos</h2>
+        <div class="filters">
+            <label for="type-filter">Filtrar por Tipo:</label>
+            <select id="type-filter">
+                <option value="all">Todas</option>
+                <option value="esportiva">Esportiva</option>
+                <option value="custom">Custom</option>
+                <option value="off-road">Off-Road</option>
+            </select>
+            <label for="price-filter">Ordenar por Preço:</label>
+            <select id="price-filter">
+                <option value="default">Padrão</option>
+                <option value="low-to-high">Menor para Maior</option>
+                <option value="high-to-low">Maior para Menor</option>
+            </select>
+        </div>
+        <div id="moto-gallery" class="moto-gallery"></div>
     </section>
-    <section>
-        <h3>Curso</h3>
-        <p>
-            Atualmente, estou cursando o ensino médio e já tenho
-             planos para o futuro. Uma das minhas maiores aspirações
-              é me tornar engenheiro agrônomo. Sempre tive um
-               interesse enorme pela agricultura e pela natureza,
-                e acredito que essa profissão é fundamental para o
-                 desenvolvimento sustentável do nosso país.
-        
 
-            Estou pesquisando sobre as faculdades que oferecem o curso
-             de engenharia agronômica e as oportunidades
-              de estágio e projetos de pesquisa que podem me ajudar
-         a me desenvolver na área. Quero aprender sobre técnicas
-                de cultivo, manejo de solo e como utilizar a
-        tecnologia para aumentar a produtividade de forma
-         sustentável.
-            
-            Estou muito empolgado com essa possibilidade e tenho
-             certeza de que, com dedicação e esforço, poderei
-              contribuir para a agricultura e ajudar os agricultores
-               a alcançarem melhores resultados. O futuro é promissor
-                e estou ansioso para fazer parte dessa transformação!
-            </p>
+    <!-- Carrinho -->
+    <section id="cart" class="cart">
+        <h2>Seu Carrinho</h2>
+        <div id="cart-items"></div>
+        <div class="cart-total">
+            <h3>Total: R$ <span id="cart-total">0,00</span></h3>
+            <button id="checkout-btn" class="btn">Finalizar Compra</button>
+        </div>
     </section>
-        <footer>
-            <a> 
-                <img src="github.png" alt="">
-            </a href="https://github.com/Felipe buzolla" target
-            <p>GitHub</p>
-        </footer>
 
-   <body>
+    <!-- Contato -->
+    <section id="contact" class="contact">
+        <h2>Entre em Contato</h2>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+            </div>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
 
-    <html>
+    <!-- Rodapé -->
+    <footer>
+        <p>© 2025 Moto Shop. Todos os direitos reservados.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">YouTube</a>
+        </div>
+    </footer>
 
-   
+    <script src="script.js"></script>
+</body>
+</html>
